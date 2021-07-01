@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+PORT=$1
+CMD=$2
+POSTWAIT=2
+WAIT=$3
+LP=1
+
+if [[ "x$WAIT" == "x" ]]; then 
+  WAIT=1;
+fi;
+
+while [[ $LP > 0 ]]; do
+  sleep 1
+  nc -vz localhost $PORT
+  LP=$?
+done;
+
+sleep $POSTWAIT
+
+eval "$CMD"

@@ -1,0 +1,6 @@
+export ZSH="/Users/trestini/.oh-my-zsh"
+ZSH_THEME="tmuxinator-pane-git"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+export EDITOR='vim'
+alias la='ls -lahF'
