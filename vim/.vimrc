@@ -4,7 +4,7 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/vim/bundle/Vundle.vim
 
-let g:polyglot_disabled = ['elixir', 'go']
+let g:polyglot_disabled = ['elixir']
 
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -20,8 +20,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'yggdroot/indentline'
 Plugin 'raimondi/delimitmate'
 Plugin 'mattn/emmet-vim'
-Plugin 'fatih/vim-go'
+" Plugin 'fatih/vim-go'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'wakatime/vim-wakatime'
 
 
 " All of your Plugins must be added before the following line
