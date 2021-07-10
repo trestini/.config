@@ -1,0 +1,9 @@
+[user]
+	email = trestini@gmail.com
+	name = Rafael Trestini
+[alias]
+	co = checkout
+	sw = switch
+	br = branch
+	st = status
+	ci = commit
