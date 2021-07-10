@@ -44,3 +44,8 @@ set number
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_symbols_ascii = 1
 
+nnoremap <C-j>     :tabnext<CR>
+nnoremap <C-k>     :tabprevious<CR>
+
+ca wq w
+ca e tabedit
