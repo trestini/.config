@@ -1,9 +1,11 @@
-[user]
-	email = trestini@gmail.com
-	name = Rafael Trestini
 [alias]
 	co = checkout
-	sw = switch
 	br = branch
-	st = status
 	ci = commit
+	st = status
+	sw = switch
+[init]
+	defaultBranch = main
+[user]
+	name = Rafael Trestini
+	email = trestini@gmail.com
