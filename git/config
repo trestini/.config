@@ -9,3 +9,5 @@
 [user]
 	name = Rafael Trestini
 	email = trestini@gmail.com
+[pull]
+	rebase = false
