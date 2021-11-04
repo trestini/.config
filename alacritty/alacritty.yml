@@ -38,16 +38,16 @@ window:
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
   position:
-    x: 0
+    x: 5
     y: 0
 
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
-  #  y: 0
+  padding:
+   x: 5
+   y: 0
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -420,9 +420,11 @@ window.opacity: 0.93
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 #shell:
-#  program: /bin/bash
+#  program: /bin/zsh
 #  args:
 #    - --login
+#    - -c
+#    - "tmux"
 
 # Startup directory
 #
@@ -719,7 +721,11 @@ window.opacity: 0.93
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-#key_bindings:
+key_bindings:
+  - { key: PageUp,   mods: Shift, action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown, mods: Shift, action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,     mods: Shift, action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,      mods: Shift, action: ScrollToBottom, mode: ~Alt       }
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
