@@ -17,5 +17,6 @@ windows:
             - sleep 5
             - ~/.config/tmuxinator/wait_for 5432 'export PGPASSWORD=postgres; pgcli -h localhost -u postgres -d $(basename "$PWD")'
          - postgres:
-            - docker run -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_DB=$(basename "$PWD") -e POSTGRES_PASSWORD=postgres postgres:alpine
+            - limactl start
+            - lima nerdctl run -p 127.0.0.1:5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_DB=$(basename "$PWD") -e POSTGRES_PASSWORD=postgres postgres:alpine
     

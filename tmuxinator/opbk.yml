@@ -1,0 +1,24 @@
+name: opbk
+root: ~/Devel/adviseu/pcm
+
+windows:
+    - console:
+        layout: 787c,218x49,0,0{109x49,0,0,1,108x49,110,0[108x15,110,0,3,108x16,110,16,4,108x16,110,33,5]}
+        panes:
+          - autotest:
+            - cd ~/Devel/adviseu/pcm/pcm-autotest
+            - sleep 20
+            - dclf autotest-report-api autotest-processor-worker
+          - autotest:
+            - cd ~/Devel/adviseu/pcm/pcm-autotest
+            - sleep 20
+            - dclf autotest-portal-bff-api autotest-management-api 
+    - docker:
+        layout: main-layout
+        panes:
+          - autotest:
+            - cd ~/Devel/adviseu/pcm/pcm-autotest
+            - dcupd --build
+          - console:
+            - cd ~/Devel/adviseu/pcm/pcm-autotest/
+    
